@@ -11,8 +11,8 @@
 
 namespace Hype\MailchimpBundle\Mailchimp\Methods;
 
-use Hype\MailchimpBundle\Mailchimp\RestClient,
-    Hype\MailchimpBundle\Mailchimp\MailchimpAPIException;
+use Ws\MailchimpBundle\Mailchimp\RestClient,
+    Ws\MailchimpBundle\Mailchimp\MailchimpAPIException;
 
 class MCHelper extends RestClient
 {

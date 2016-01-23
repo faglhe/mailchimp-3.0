@@ -9,9 +9,9 @@
  * @author Ahmed Samy <ahmed.samy.cs@gmail.com>
  */
 
-namespace Hype\MailchimpBundle\Mailchimp\Methods;
+namespace Ws\MailchimpBundle\Mailchimp\Methods;
 
-use Hype\MailchimpBundle\Mailchimp\RestClient;
+use Ws\MailchimpBundle\Mailchimp\RestClient;
 
 class MCExport extends RestClient {
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Hype\MailchimpBundle\Mailchimp;
+namespace Ws\MailchimpBundle\Mailchimp;
 
 use Buzz\Browser,
     Buzz\Client\Curl;
@@ -33,7 +33,7 @@ class RestClient
      * @param boolean $export indicate wether API used is Export API or not
      * @return array
      */
-    protected function requestMonkey($apiCall, $payload, $export = false)
+    protected function requestMonkey($apiCall, $payload, $export = false, $versao = '2.0')
     {
         $payload['apikey'] = $this->config['api_key'];
 
@@ -42,12 +42,18 @@ class RestClient
         } else {
             $url = $this->dataCenter . '2.0/' . $apiCall;
         }
+        if($versao == '3.0') {
+        $headers['Authorization'] =
+            $url = $this->dataCenter . '3.0/' . $apiCall;
+        }
+        $auth = "apikey ".$payload['apikey'];
         $curl = $this->prepareCurl();
         $browser = new Browser($curl);
         $payload = json_encode($payload);
         $headers = array(
             "Accept" => "application/json",
-            "Content-type" => "application/json"
+            "Content-type" => "application/json",
+            "Authorization" => $auth
         );
         $response = $browser->post($url, $headers, $payload);
 
@@ -64,6 +70,7 @@ class RestClient
         $curl->setOption(CURLOPT_USERAGENT, 'HypeMailchimp');
         $curl->setVerifyPeer(false);
         $curl->setTimeout($this->config['timeout']);
+
         return $curl;
     }
 

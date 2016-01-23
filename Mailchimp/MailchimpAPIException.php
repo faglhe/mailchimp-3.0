@@ -9,7 +9,7 @@
  * @author Ahmed Samy <ahmed.samy.cs@gmail.com>
  */
 
-namespace Hype\MailchimpBundle\Mailchimp;
+namespace Ws\MailchimpBundle\Mailchimp;
 
 class MailchimpAPIException extends \Exception {
 

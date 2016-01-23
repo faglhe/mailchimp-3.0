@@ -9,10 +9,10 @@
  * @author Ahmed Samy <ahmed.samy.cs@gmail.com>
  */
 
-namespace Hype\MailchimpBundle\Mailchimp\Methods;
+namespace Ws\MailchimpBundle\Mailchimp\Methods;
 
-use Hype\MailchimpBundle\Mailchimp\RestClient,
-    Hype\MailchimpBundle\Mailchimp\MailchimpAPIException;
+use Ws\MailchimpBundle\Mailchimp\RestClient,
+    Ws\MailchimpBundle\Mailchimp\MailchimpAPIException;
 
 class MCCampaign extends RestClient {
 

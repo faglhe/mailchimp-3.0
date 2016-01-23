@@ -1,8 +1,8 @@
 parameters:
-    hype_mailchimp.class: Hype\MailchimpBundle\Mailchimp\MailChimp
+    ws_mailchimp.class: Ws\MailchimpBundle\Mailchimp\MailChimp
 
 services:
-    hype_mailchimp:
+    ws_mailchimp:
       class: %hype_mailchimp.class%
       arguments: [%hypemailchimp.config%]
       

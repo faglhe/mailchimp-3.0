@@ -9,10 +9,10 @@
  * @author Ahmed Samy <ahmed.samy.cs@gmail.com>
  */
 
-namespace Hype\MailchimpBundle\Mailchimp\Methods;
+namespace Ws\MailchimpBundle\Mailchimp\Methods;
 
-use Hype\MailchimpBundle\Mailchimp\RestClient,
-    Hype\MailchimpBundle\Mailchimp\MailchimpAPIException,
+use Ws\MailchimpBundle\Mailchimp\RestClient,
+    Ws\MailchimpBundle\Mailchimp\MailchimpAPIException,
     Buzz\Exception\InvalidArgumentException as InvalidArgumentException;
 
 class MCList extends RestClient
@@ -689,5 +689,28 @@ class MCList extends RestClient
         else
             return isset($data) ? $data : false;
     }
+
+
+    public function addMergeVar($tag, $name, $type = 'text', $options = array()) {
+        $payload = array(
+            'tag' => $tag,
+            'name' => $name,
+            'type' => $type
+        );
+
+        if (sizeof($options)>0){
+            $payload['options'] = $options;
+        }
+
+        $apiCall = 'lists/'.$this->listId.'/merge-fields';
+        $data = $this->requestMonkey($apiCall, $payload, false, '3.0');
+        $data = json_decode($data, true);
+
+        if (isset($data['error']))
+            throw new MailchimpAPIException($data);
+        else
+            return isset($data) ? $data : false;
+    }
+
 
 }

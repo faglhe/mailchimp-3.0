@@ -2,9 +2,9 @@
 
 
 
-namespace Hype\MailchimpBundle\Mailchimp;
+namespace Ws\MailchimpBundle\Mailchimp;
 
-use Hype\MailchimpBundle\Mailchimp\RestClient;
+use Ws\MailchimpBundle\Mailchimp\RestClient;
 
 class MCEcommerce extends RestClient
 {

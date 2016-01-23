@@ -1,22 +1,22 @@
 {
-    "name": "ahmedsamy/hype-mailchimp-bundle",
+    "name": "thavia/mailchimp-3.0",
     "license": "MIT",
     "type": "symfony-bundle",
-    "description": "Mailchimp V2.0 API Object Oriented wrapper",
-    "homepage": "https://github.com/AhmedSamy/hype-mailchimp-api-2.0",
+    "description": "Mailchimp V3.0 API Object Oriented wrapper",
+    "homepage": "https://github.com/Thavia/mailchimp-3.0",
     "keywords": ["mailchimp","api","newsletter","http client", "curl"],
     "authors": [
         {
-            "name": "Ahmed Samy",
-            "email": "ahmed.samy.cs@gmail.com",
-            "homepage":"http://www.ahmed-samy.com",
+            "name": "Thavia Farias",
+            "email": "suporte@websumare.com.br",
+            "homepage":"http://www.websumare.com.br",
             "role":"Developer"
         }
     ],
     "autoload": {
-        "psr-0": { "Hype\\MailchimpBundle": "" }
+        "psr-0": { "Ws\\MailchimpBundle": "" }
     },
-    "target-dir": "Hype/MailchimpBundle",
+    "target-dir": "Ws/MailchimpBundle",
     "require": {
         "php": ">=5.3.2",
         "symfony/framework-bundle": "2.*",
