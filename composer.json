@@ -19,7 +19,7 @@
     "target-dir": "Ws/MailchimpBundle",
     "require": {
         "php": ">=5.3.2",
-        "symfony/framework-bundle">= "3.*",
+        "symfony/framework-bundle": "3.*",
         "kriswallsmith/buzz":">=0.7",
         "ext-curl": "*"
     },
